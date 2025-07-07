@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/fonts/Avenir/Avenir-Book.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat/Montserrat-Medium.ttf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+.avenir-book-45 {
+  font-family: "Avenir", sans-serif;
+  font-weight: 500;
+  font-size: 45px;
+}
+
+.avenir-book-14 {
+  font-family: "Avenir", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.avenir-book-12 {
+  font-family: "Avenir", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.montserrat-regular-15 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.montserrat-medium-15 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 12px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #b0b0b0, #e0e0e0);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #afafaf;
+  border-radius: 9999px;
+}
